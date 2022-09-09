@@ -1,0 +1,98 @@
+﻿@model UnitedNavigationTask.MVC.Models.ImportCSV
+@{
+    ViewData["Title"] = "Home Page";
+    int counter = 1;
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/jquery.dataTables.css" asp-append-version="true" />
+    <script src="~/lib/DataTable/jquery.dataTables.min.js" defer></script>
+    <script src="~/js/placeOrder/PlaceOrder.js"></script>
+</head>
+<body>
+    <form method="post" asp-action="Import" asp-controller="Home" autocomplete="off" enctype="multipart/form-data">
+        <div id="formCard" class="card mt-2 mb-4">
+            <div class="card-body">
+                <h5 class="card-title text-center">Import CSV File</h5>
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
+                        <p class="card-text text-center">
+                            Please select a file to import.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
+                        @Html.ValidationSummary(false, "", new { @class = "text-red" })
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    @Html.TextBoxFor(x => x.FormFile, new { @type = "file", @class = "col-sm-4"})
+                </div>
+
+                <div class="row justify-content-center">
+                    <button id="saveButton" class="btn btn-primary m-2" type="submit">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    @{
+        @if (Model != null)
+        {
+            <table class="display" id="orders">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Order Number</th>
+                        <th scope="col">Consignment Number</th>
+                        <th scope="col">Parcel Code</th>
+                        <th scope="col">Consignee Name</th>
+                        <th scope="col">Address One</th>
+                        <th scope="col">Address Two</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Country Code</th>
+                        <th scope="col">Item Quantity</th>
+                        <th scope="col">Item Value</th>
+                        <th scope="col">Item Weight</th>
+                        <th scope="col">Item Description</th>
+                        <th scope="col">Item Currency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var record in Model.Records)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(m => record.OrderNumber)</td>
+                        <td>@Html.DisplayFor(m => record.ConsignmentNumber)</td>
+                        <td>@Html.DisplayFor(m => record.ParcelCode)</td>
+                        <td>@record.ConsigneeName</td>
+                        <td>@record.AddressOne</td>
+                        <td>@record.AddressTwo</td>
+                        <td>@record.City</td>
+                        <td>@record.CountryCode</td>
+                        <td>@record.ItemQuantity</td>
+                        <td>@record.ItemValue</td>
+                        <td>@record.ItemWeight</td>
+                        <td>@record.ItemDesciption</td>
+                        <td>@record.ItemCurrency</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+
+            // My thought process is that if there is no table then there shouldnt be a button to export or place orders
+            <form method="post" asp-action="ExportToXML" asp-controller="Home" autocomplete="off">
+                <div id="formCard" class="card mt-2 mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Export CSV File</h5>
+                        <div class="row justify-content-center">
+                            <button id="saveButton" class="btn btn-primary m-2" type="submit">Export</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="row justify-content-center">
+                <button id="button" class="btn btn-primary m-2">Place Order</button>
+            </div>
+        }
+    }
+</body>

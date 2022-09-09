@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "99Uo5qE7Qnkw5pDryuJL692HohMr7IOWwUVWTLq8BUWZ3u3Q8205/KUX1yfPklozrq+hoyMhcwWztmFUCoHk/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gh\\source\\repos\\UnitedNavigationTask.MVC\\UnitedNavigationTask.MVC\\UnitedNavigationTask.MVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gh\\.nuget\\packages\\csvhelper\\28.0.1\\csvhelper.28.0.1.nupkg.sha512",
+    "C:\\Users\\gh\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

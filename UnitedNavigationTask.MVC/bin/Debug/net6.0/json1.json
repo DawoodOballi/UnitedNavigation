@@ -1,0 +1,22 @@
+{
+  "id": 0,
+  "orderNumber": "ORD001",
+  "accountRef": "CON001",
+  "address1": "10 Baker Street",
+  "address2": "Peckham",
+  "address3": "London",
+  "address4": "GB",
+  "contactName": "Bob Berg",
+  "orderDate": "2022-01-25T14:07:18.654Z",
+  "inSage": false,
+  "purchaseOrderItems": [
+    {
+      "id": 0,
+      "purchaseOrderHeaderId": 0,
+      "stockCode": "PARC001",
+      "description": "Pen",
+      "orderQty": 1,
+      "unitPrice": 1.1
+    }
+  ]
+}

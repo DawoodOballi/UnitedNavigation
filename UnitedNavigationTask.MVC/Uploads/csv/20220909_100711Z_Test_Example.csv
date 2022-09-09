@@ -1,0 +1,9 @@
+Order No,Consignment No,Parcel Code,Consignee Name,Address 1,Address 2,City,Country Code,Item Quantity,Item Value,Item Weight,Item Description,Item Currency
+ORD001,CON001,PARC001,Bob Berg,10 Baker Street,Peckham,London,GB,1,1.1,1.1,Pen,
+ORD001,CON001,PARC002,Bob Berg,10 Baker Street,Peckham,London,GB,2,3.4,3.4,Pencil Case,
+ORD002,CON002,PARC003,Frank Berg,10 Baker Street,Peckham,London,GB,1,8,8,Socks,
+ORD003,CON003,PARC004,D Cameron,10 Downing St,Brixton,,GB,1,80,80,Pen,
+ORD004,CON004,PARC005,Luigi Da Vinci,Casa di Bolos,Dulce Av.,Milano,IT,1,80,80,Stilos Roj¢,EUR
+ORD005,CON005,PARC006,Pete Aftermey,"793 Id, Avenu",Beaomont,Plymouth,GB,1,1245.99,2500,Laptop,
+ORD006,CON006,PARC007,Kerry Oki,408  Orci Rd,Forest Park,Lincoln,GB,1,125.5,3000,Duvet,
+ORD007,CON007,PARC008,Levon Hold,211 Nulla Roa,West End,Southampton,GB,2,51.98,600,T-shirts,
